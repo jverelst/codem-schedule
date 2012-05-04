@@ -19,6 +19,6 @@ module ApplicationHelper
           when 'failed'; then 'important'
           else 'default'
           end
-    content_tag(:span, class: "label label-#{css}") { state.capitalize }
+    content_tag(:span, :class => "label label-#{css}") { state.capitalize }
   end
 end

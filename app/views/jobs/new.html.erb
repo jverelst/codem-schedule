@@ -1,6 +1,6 @@
 <% title 'New job' %>
 
-<%= form_tag api_jobs_path, class: 'form-horizontal' do %>
+<%= form_tag api_jobs_path, :class => 'form-horizontal' do %>
 	
 	<%#= error_messages_for @job %>
 	
@@ -8,37 +8,37 @@
     <legend>Create a new job</legend>
 
     <div class="control-group">
-      <%= label_tag :input, nil, class: 'control-label' %>
+      <%= label_tag :input, nil, :class => 'control-label' %>
       <div class="controls">
-        <%= text_field_tag :input, @job.try(:source_file), class: 'input-xlarge' %>
+        <%= text_field_tag :input, @job.try(:source_file), :class => 'input-xlarge' %>
       </div>
     </div>
 
     <div class="control-group">
-      <%= label_tag :output, nil, class: 'control-label' %>
+      <%= label_tag :output, nil, :class => 'control-label' %>
       <div class="controls">
-        <%= text_field_tag :output, @job.try(:destination_file), class: 'input-xlarge' %>
+        <%= text_field_tag :output, @job.try(:destination_file), :class => 'input-xlarge' %>
       </div>
     </div>
 
     <div class="control-group">
-      <%= label_tag :preset, nil, class: 'control-label' %>
+      <%= label_tag :preset, nil, :class => 'control-label' %>
       <div class="controls">
-        <%= select_tag :preset, options_for_select(Preset.all.map { |p| [p.name] }, @job.try(:preset).try(:name)), class: 'input-xlarge' %>
+        <%= select_tag :preset, options_for_select(Preset.all.map { |p| [p.name] }, @job.try(:preset).try(:name)), :class => 'input-xlarge' %>
       </div>
     </div>
 
     <div class="control-group">
-      <%= label_tag :notify, nil, class: 'control-label' %>
+      <%= label_tag :notify, nil, :class => 'control-label' %>
       <div class="controls">
-        <%= text_area_tag :notify, nil, rows: 3, class: 'input-xlarge' %>
+        <%= text_area_tag :notify, nil, :rows => 3, :class => 'input-xlarge' %>
       </div>
     </div>
 
   </fieldset>
   
   <div class="form-actions"> 
-    <%= submit_tag 'Create Job', class: 'btn btn-primary' %> or 
+    <%= submit_tag 'Create Job', :class => 'btn btn-primary' %> or 
     <%= link_to 'Cancel', jobs_path %>
   </div>
   

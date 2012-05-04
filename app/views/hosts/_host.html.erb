@@ -4,8 +4,8 @@
     <h4><%= host.url %></h4>
   </div>
 
-  <%= link_to 'Edit', edit_host_path(host), class: 'btn btn-mini' %> 
-  <%= link_to 'Delete', api_host_path(host), class: 'btn btn-mini', method: :delete, confirm: t('confirm.delete', :model_name => 'host')  %>
+  <%= link_to 'Edit', edit_host_path(host), :class => 'btn btn-mini' %> 
+  <%= link_to 'Delete', api_host_path(host), :class => 'btn btn-mini', :method => :delete, :confirm => t('confirm.delete', :model_name => 'host')  %>
 
   <% if host.available %>
     <br/><br/>

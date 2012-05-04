@@ -9,7 +9,7 @@ module WillPaginate
       protected
 
       def container_attributes
-        { class: 'pagination pagination-centered' }
+        { :class => 'pagination pagination-centered' }
       end
 
       def html_container(html)
